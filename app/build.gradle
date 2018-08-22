@@ -111,3 +111,9 @@ repositories {
     mavenCentral()
     maven { url 'https://jitpack.io' }
 }
+
+android {
+      lintOptions {
+          abortOnError false
+      }
+  }
