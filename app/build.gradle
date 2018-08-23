@@ -1,7 +1,12 @@
+plugins {
+  id "org.sonarqube" version "2.6.2"
+}
+
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: "org.jetbrains.kotlin.kapt"
+apply plugin: "org.sonarqube"
 
 android {
     compileSdkVersion 25
@@ -104,12 +109,14 @@ buildscript {
     dependencies {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         classpath "org.jetbrains.kotlin:kotlin-android-extensions:$kotlin_version"
+        classpath "org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:2.6.2"
     }
 }
 
 repositories {
     mavenCentral()
     maven { url 'https://jitpack.io' }
+    maven { url "https://plugins.gradle.org/m2/"}
 }
 
 android {
