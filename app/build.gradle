@@ -4,6 +4,8 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: "org.jetbrains.kotlin.kapt"
 apply plugin: "org.sonarqube"
+apply from: '../jacoco.gradle'
+apply from: '../sonar.gradle'
 
 android {
     compileSdkVersion 25
