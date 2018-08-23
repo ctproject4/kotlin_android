@@ -123,3 +123,10 @@ android {
           abortOnError false
       }
   }
+  
+  sonarqube {
+    properties {
+        property 'sonar.kotlin_demo', 'Example of SonarQube Scanner for Gradle Usage'
+    }
+}
+
